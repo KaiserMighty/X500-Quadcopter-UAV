@@ -1,0 +1,44 @@
+# === ROS 2 colcon build artifacts ===
+build/
+install/
+log/
+
+# === CMake files ===
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# === Python cache ===
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# === Model artifacts ===
+*.dae~
+*.stl~
+*.sdf~
+*.urdf~
+*.tmp
+*.swp
+
+# === Launch/test artifacts ===
+*.launch.py~
+*.test.py~
+
+# === VSCode or JetBrains IDE ===
+.vscode/
+.idea/
+
+# === OS and Editor trash ===
+.DS_Store
+Thumbs.db
+*.bak
+*.orig
+
+# === ROS 2 security (optional) ===
+security/
+
+# === Gazebo logs and cache ===
+~/.gazebo/log/

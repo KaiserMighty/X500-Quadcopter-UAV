@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>x500_model</name>
+  <version>0.1.0</version>
+  <description>X500 Quadcopter UAV</description>
+  <maintainer email="unikmey@gmail.com">Mighty</maintainer>
+  <license>MIT</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <exec_depend>gazebo_ros</exec_depend>
+</package>
