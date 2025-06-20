@@ -3,8 +3,8 @@ ROS2 and Gazebo robotics project using an X500 based quadcopter UAV with a senso
 
 
 ### Commands
-```source /opt/ros/rolling/setup.bash```  
+```export GZ_SIM_RESOURCE_PATH=$GZ_SIM_RESOURCE_PATH:~/X500-Quadcopter-UAV/src/x500_uav/models```  
+```source /opt/ros/kilted/setup.bash```  
 ```colcon build```  
 ```source install/setup.bash```  
-```gz sim -v 4 empty.sdf```  
-```ros2 launch x500_model spawn_model.launch.py```  
+```ros2 launch x500_uav sim.launch.py```  
