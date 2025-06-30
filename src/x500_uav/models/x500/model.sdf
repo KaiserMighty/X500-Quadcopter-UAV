@@ -218,6 +218,7 @@
       <sensor name="air_pressure_sensor" type="air_pressure">
         <always_on>1</always_on>
         <update_rate>50</update_rate>
+        <topic>x500/air_pressure</topic>
         <air_pressure>
           <pressure>
             <noise type="gaussian">
@@ -230,6 +231,7 @@
       <sensor name="imu_sensor" type="imu">
         <always_on>1</always_on>
         <update_rate>250</update_rate>
+        <topic>x500/imu</topic>
       </sensor>
     </link>
     <link name="rotor_0">
@@ -520,7 +522,7 @@
         </dynamics>
       </axis>
     </joint>
-   <plugin filename="gz-sim-multicopter-motor-model-system" name="gz::sim::systems::MulticopterMotorModel">
+    <plugin filename="gz-sim-multicopter-motor-model-system" name="gz::sim::systems::MulticopterMotorModel">
       <jointName>rotor_0_joint</jointName>
       <linkName>rotor_0</linkName>
       <turningDirection>ccw</turningDirection>

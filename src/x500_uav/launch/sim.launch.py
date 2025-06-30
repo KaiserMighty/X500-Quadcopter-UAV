@@ -17,8 +17,8 @@ def generate_launch_description():
 
         Node(
             package='x500_controller',
-            executable='motor_controller',
-            name='motor_controller',
+            executable='flight_controller',
+            name='flight_controller',
             output='screen'
         )
     ])

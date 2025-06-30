@@ -8,28 +8,29 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(sensor_msgs REQUIRED)
 find_package(Protobuf REQUIRED)
 find_package(gz_transport_vendor REQUIRED)
 find_package(gz-transport14 REQUIRED)
 find_package(gz_msgs_vendor REQUIRED)
 find_package(gz-msgs11 REQUIRED)
+find_package(tf2 REQUIRED)
+find_package(tf2_geometry_msgs REQUIRED)
 
-include_directories(
-  ${gz-transport14_INCLUDE_DIRS}
-  ${gz-msgs11_INCLUDE_DIRS}
-)
+add_executable(flight_controller src/flight_controller.cpp)
 
-add_executable(motor_controller src/motor_controller.cpp)
-
-target_link_libraries(motor_controller PUBLIC
+target_link_libraries(flight_controller PUBLIC
+  ${sensor_msgs_TARGETS}
   rclcpp::rclcpp
+  sensor_msgs::sensor_msgs_library
   protobuf
   ${gz-transport14_LIBRARIES}
   ${gz-msgs11_LIBRARIES}
+  tf2::tf2
 )
 
 install(TARGETS
-  motor_controller
+  flight_controller
   DESTINATION lib/${PROJECT_NAME}
 )
 
